@@ -5,7 +5,7 @@
   "require": {
     "php": "^7.3 || ^8.0 || ^8.1",
     "ext-simplexml": "*",
-    "pimple/pimple": "^3.5",
+    "pimple/pimple": "^3.2",
     "vimeo/psalm": "^4.30"
   },
   "license": "MIT",
