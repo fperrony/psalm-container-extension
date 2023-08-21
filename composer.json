@@ -1,0 +1,66 @@
+{
+  "name": "fcpl/psalm-pimple-container-plugin",
+  "description": "Psalm plugin to resolve return type for Pimple Container (ArrayAccess)",
+  "type": "psalm-plugin",
+  "require": {
+    "php": "^7.3 || ^8.0 || ^8.1",
+    "ext-simplexml": "*",
+    "pimple/pimple": "^3.5",
+    "vimeo/psalm": "^4.30"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Fcpl\\Psalm\\Pimple\\Container\\Plugin\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Fcpl\\Psalm\\Pimple\\Container\\Plugin\\Tests\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Franklin C. Perrony de Liz",
+      "email": "fperrony@gmail.com"
+    }
+  ],
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "@stable",
+    "friendsofphp/php-cs-fixer": "@stable",
+    "nunomaduro/phpinsights": "@stable",
+    "pheromone/phpcs-security-audit": "@stable",
+    "phpcompatibility/php-compatibility": "@stable",
+    "phpmd/phpmd": "@stable",
+    "phpmetrics/phpmetrics": "@stable",
+    "phpstan/phpstan": "@stable",
+    "phpstan/phpstan-phpunit": "@stable",
+    "phpunit/phpunit": "@stable",
+    "psalm/plugin-phpunit": "@stable",
+    "slevomat/coding-standard": "@stable",
+    "squizlabs/php_codesniffer": "@stable",
+    "weirdan/codeception-psalm-module": "@stable"
+  },
+  "scripts": {
+    "phpcs": "./vendor/bin/phpcs --standard=ruleset-quality.xml",
+    "phpmd": "./vendor/bin/phpmd ./src,./tests ansi rulesets.xml",
+    "phpmetrics": "./vendor/bin/phpmetrics --config=\"php-metrics-config.yml\" --junit=\"var/junit.xml\"",
+    "phpstan": "./vendor/bin/phpstan --no-ansi --configuration=phpstan.neon",
+    "psalm": "./vendor/bin/psalm --config=psalm.xml",
+    "phpinsights": "./vendor/bin/phpinsights --no-interaction --config-path=phpinsights.php",
+    "tests": "./vendor/bin/phpunit --configuration phpunit.xml"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "extra": {
+    "psalm": {
+      "pluginClass": "Fcpl\\Psalm\\Pimple\\Container\\Plugin\\PimpleContainerPlugin"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<psalm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       findUnusedCode="true"
+       errorLevel="1"
+       xmlns="https://getpsalm.org/schema/config"
+       xsi:schemaLocation="https://getpsalm.org/schema/config ../schemas/psalm.xsd"
+       hoistConstants="true"
+       cacheDirectory="var/"
+       findUnusedVariablesAndParams="true"
+       strictBinaryOperands="true">
+    <projectFiles>
+        <directory name="src"/>
+        <directory name="tests"/>
+        <ignoreFiles>
+            <directory name="vendor"/>
+        </ignoreFiles>
+    </projectFiles>
+    <plugins>
+        <pluginClass class="Psalm\PhpUnitPlugin\Plugin"/>
+    </plugins>
+    <stubs>
+        <file name="vendor/bin/phpunit" />
+    </stubs>
+</psalm>

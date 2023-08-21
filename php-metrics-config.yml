@@ -1,0 +1,17 @@
+---
+includes:
+  - "src"
+exclude:
+  - "tests"
+  - "vendor"
+extensions:
+  - "php"
+report:
+  html: "var/phpmetrics"
+  json: "var/phpmetrics.json"
+  violations: "var/violations.xml"
+plugins:
+  git:
+    binary: git
+  junit:
+    file: "var/junit.xml"

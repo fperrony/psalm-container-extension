@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  php7.3:
+    build:
+        context: ./docker/php7.3
+        dockerfile: Dockerfile
+    volumes:
+      - ./:/opt/project
+    user: 1000:1000
+    working_dir: /opt/project
