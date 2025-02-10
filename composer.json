@@ -3,7 +3,7 @@
   "description": "Psalm plugin to resolve return type for Pimple Container (ArrayAccess)",
   "type": "psalm-plugin",
   "require": {
-    "php": "^7.3 || ^7.4 || ^8.0 || ^8.1",
+    "php": ">=7.3",
     "ext-simplexml": "*",
     "pimple/pimple": ">=3.2",
     "vimeo/psalm": ">=4.30"
